@@ -1,60 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+			integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Pop'it | Home</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-		integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
-	<link rel="stylesheet" href="styles.css">
-	<title>Pop'it | Home</title>
-</head>
-
-<body>
-	<nav>
-		<div class="navbar">
-			<div class="logo">
-				<a href="/"><span id="logo">Pop'it</span></a>
-			</div>
-
-			<div class="profile" id="menu">
-				<a href="/">
-					<i class="far fa-user-circle"></i></a>
-			</div>
-		</div>
-	</nav>
-
-	<main>
-		<form>
-			<div>
-				<div class="card">
-					<img src="" alt="Profile picture">
+	<body>
+		<!-- Navbar with title and login icon - Green background-->
+		<nav>
+			<div class="navbar">
+				<div class="logo">
+					<a href="/"><span id="logo">Pop'it</span></a>
 				</div>
-				<div class="background-card">
-					<input type="text" name="" id="" placeholder="What's popping, @username?">
-					<button type="submit" value="Pop!">
+
+				<div class="profile" id="menu">
+					<a href="/"> <i class="far fa-user-circle"></i></a>
 				</div>
 			</div>
-		</form>
-		<form>
-			<div>
-				<div class="card">
-					<img src="" alt="Profile picture">
-				</div>
-				<div class="background-card">
-					<div>
-						<p><a class="card-username" href="USERNAME">USERNAME</a><span>@username 4h</span></p>
+		</nav>
+
+		<section id="what-is-popping" class="form">
+			<div class="container">
+				<!-- Pop form input to send a pop -->
+				<div class="pop-card">
+					<div class="pop-profile-picture">
+						<img
+							id="profile-picture"
+							src="./assets/profile-picture-placeholder.jpg"
+							width="100px"
+							alt="Profile Picture"
+						/>
 					</div>
-					<p>This is a pop!
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure itaque non nemo. Deserunt
-						cupiditate nulla impedit porro ea, ipsum maiores saepe aperiam rem, placeat veritatis at cum
-						fuga perferendis quidem.Quas fugit, expedita mollitia quis eum quia.
+					<div class="pop-form">
+						<div class="ui-card">
+							<div>
+								<p class="card-username">
+									<a
+										id="username"
+										class="card-username"
+										href="USERNAME"
+										>USERNAME</a
+									>
+									<span>#discord 1234</span>
+								</p>
+							</div>
+						</div>
+						<form action="">
+							<textarea
+								maxlength="250"
+								autofocus
+								name="content-pop"
+								id="content-pop"
+								placeholder="What's popping, @username?"
+							></textarea>
+							<div class="ui-buttons">
+								<button
+									class="ui-button send-pop"
+									title="Send"
+									type="submit"
+									value="Pop!"
+									id="send-pop"
+									name="send-pop"
+								></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- End of Pop form input to send a pop -->
+		</section>
+
+		<main>
+			<div id="pop-list" class="container pop-list">
+				<!-- Pops sent that is yours -->
+				<div class="pop-card">
+					<div class="pop-profile-picture">
+						<img
+							id="profile-picture"
+							src="./assets/profile-picture-placeholder.jpg"
+							width="100px"
+							alt="Profile Picture"
+						/>
+					</div>
+					<div class="pop-form">
+						<div class="ui-card">
+							<div>
+								<p class="card-username">
+									<a
+										id="username"
+										class="card-username"
+										href="USERNAME"
+										>USERNAME</a
+									>
+									<span>#discord 1234</span>
+								</p>
+							</div>
+							<!-- Appears when is one of your pop that you sent -->
+							<button
+								class="ui-button delete-pop"
+								title="Delete"
+							></button>
+						</div>
+						<!-- Shows texts from other Poppers - should be disabled -->
+						<div class="pop-content"></div>
+					</div>
+				</div>
+				<!-- Pops sent that is NOT yours -->
+				<div class="pop-card">
+					<div class="pop-profile-picture">
+						<img
+							id="profile-picture"
+							src="./assets/profile-picture-placeholder.jpg"
+							width="100px"
+							alt="Profile Picture"
+						/>
+					</div>
+					<div class="pop-form">
+						<div class="ui-card">
+							<div>
+								<p class="card-username">
+									<a
+										id="username"
+										class="card-username"
+										href="USERNAME"
+									>
+										USERNAME
+									</a>
+									<span>#discord 1234</span>
+								</p>
+							</div>
+						</div>
+						<!-- Shows texts from other Poppers - should be disabled -->
+						<div class="pop-content"></div>
+						<div class="ui-buttons">
+							<button
+								class="ui-button like-pop"
+								title="Like"
+							></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="pop-list" class="container pop-list">
+				<!-- Pops sent that is yours -->
+				<div class="pop-card">
+					<div class="pop-profile-picture">
+						<img
+							id="profile-picture"
+							src="./assets/profile-picture-placeholder.jpg"
+							width="100px"
+							alt="Profile Picture"
+						/>
+					</div>
+					<div class="pop-form">
+						<div class="ui-card">
+							<div>
+								<p class="card-username">
+									<a
+										id="username"
+										class="card-username"
+										href="USERNAME"
+										>USERNAME</a
+									>
+									<span>#discord 1234</span>
+								</p>
+							</div>
+							<!-- Appears when is one of your pop that you sent -->
+							<button
+								class="ui-button delete-pop"
+								title="Delete"
+							></button>
+						</div>
+						<!-- Shows texts from other Poppers - should be disabled -->
+						<div class="pop-content"></div>
+					</div>
+				</div>
+				<!-- Pops sent that is NOT yours -->
+				<div class="pop-card">
+					<div class="pop-profile-picture">
+						<img
+							id="profile-picture"
+							src="./assets/profile-picture-placeholder.jpg"
+							width="100px"
+							alt="Profile Picture"
+						/>
+					</div>
+					<div class="pop-form">
+						<div class="ui-card">
+							<div>
+								<p class="card-username">
+									<a
+										id="username"
+										class="card-username"
+										href="USERNAME"
+									>
+										USERNAME
+									</a>
+									<span>#discord 1234</span>
+								</p>
+							</div>
+						</div>
+						<!-- Shows texts from other Poppers - should be disabled -->
+						<div class="pop-content"></div>
+						<div class="ui-buttons">
+							<button
+								class="ui-button like-pop"
+								title="Like"
+							></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<section id="introduction">
+			<div class="introduction-welcome container">
+				<div>
+					<img src="/client/assets/popcorn.png" alt="" />
+				</div>
+				<div class="introduction-welcome-content">
+					<h1>
+						Welcome to Pop'it! 💜
+					</h1>
+					<p>
+						We are honored to have you here, dear Poppers! Feel free
+						to navigate this space and tell us how awesome your
+						exeprience was with this color popping app! Pop a
+						thought!
 					</p>
 				</div>
 			</div>
-		</form>
-	</main>
-</body>
+		</section>
 
+		<section id="news-feed">
+			<div class="what-you-missed-thread">
+				<div>
+					<h2>
+						What you missed
+					</h2>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<div class="social-media">
+					<div id="social-media-nash">
+						<h4>DrillsKibo</h4>
+						<ul>
+							<li><a href="">Github</a></li>
+							<li><a href="">Site perso</a></li>
+							<li><a href="">Autre</a></li>
+						</ul>
+					</div>
+					<div id="social-media-ana">
+						<h4>Anaesthra</h4>
+						<ul>
+							<li><a href="">Github</a></li>
+							<li><a href="">Site perso</a></li>
+							<li><a href="">Autre</a></li>
+						</ul>
+					</div>
+					<p class="p-footer">
+						Lorem ipsum dolor, sit amet consectetur adipisicing
+						elit. Culpa nulla minima blanditiis modi asperiores
+						repellat dolores maxime voluptatibus libero dolore
+						voluptatem nemo impedit, id doloremque consequuntur
+						labore! Illum, sequi doloribus? Hic natus eveniet
+						expedita maiores, dolorum minus reiciendis placeat fugit
+						quaerat quibusdam quo iusto quisquam nostrum minima
+						deserunt aliquid et ut voluptatum excepturi facere
+						alias! Eum temporibus culpa dolore fugiat.
+					</p>
+				</div>
+			</div>
+			<div>
+				<p>Copyright &copy; 2020 Nash & Ana - Pop'it</p>
+			</div>
+		</footer>
+
+		<script src="./app.js"></script>
+	</body>
 </html>

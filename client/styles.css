@@ -1,88 +1,342 @@
-/* -- BODY -- */
+/* --| BODY |-- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Raleway", sans-serif;
+	background-color: fff;
 }
 
-/* -- NAVIGATION -- */
+/* --| NAVIGATION |-- */
 nav {
-    background-color: #00f5d4;
-    width: 100%;
-    height: 220px;
+	background-color: #00f5d4;
+	width: 100%;
+	height: 15rem;
+	padding-left: 42%;
 }
-
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-left: 50%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding-left: 5rem;
 }
 
-#menu {
-    width: 100px;
-    height: 100px;
-    margin-right: 30px;
-    margin-top: 21px;
-    background: #f8f9fa;
-    box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.14);
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    padding-top: 41px;
-}
-
+/* -- LOG IN / PROFILE PICTURE -- */
 .fa-user-circle {
-    font-size: 70px;
-    color: #00f5d4;
+	font-size: 70px;
+	color: #00f5d4;
+}
+#menu {
+	width: 100px;
+	height: 100px;
+	margin-right: 30px;
+	margin-top: 21px;
+	background: #f8f9fa;
+	box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.14);
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
+/* -- LOGO -- */
+#logo {
+	font-weight: 800;
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: #000000;
+}
+.logo {
+	padding-top: 3rem;
+}
+
+/* -- UTILITIES -- */
 a,
 i {
-    text-decoration: none;
-    cursor: pointer;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* --| END OF NAVIGATION |-- */
+
+/* --| POPS |-- */
+.pop-card {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 1rem;
 }
 
-#logo {
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 36px;
-    letter-spacing: -0.015em;
-    text-transform: uppercase;
-    color: #000000;
+/* -- POP PROFILE PICTURE -- */
+#profile-picture {
+	border-radius: 100px;
+	border: 3px solid #00f5d4;
+}
+div.pop-profile-picture {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+#what-is-popping,
+.form {
+	position: relative;
+	top: -7rem;
 }
 
-/* -- HEADER -- */
-/* Pop input */
-.card {
-    width: 810px;
-    height: 173px;
+/* -- POP FORM -- */
+.pop-form {
+	background: #ffffff;
+	border: 3px solid #00f5d4;
+	box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.14);
+	border-radius: 12px;
+	height: 12rem;
+	width: 60%;
+	margin-left: 1.5rem;
+	padding-bottom: 12rem;
+}
+input {
+	outline: none;
+	border: none;
+	margin-top: 0.5rem;
+	margin-left: 0.7rem;
+	width: 90%;
 }
 
-.background-card {
-    background: #ffffff;
-    border: 3px solid #00f5d4;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.14);
-    border-radius: 12px;
+/* -- POP USERNAME -- */
+a.card-username {
+	font-weight: 900;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	margin-top: 0.7rem;
+	margin-left: 0.7rem;
+	color: #000000;
+}
+p.card-username {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+p span {
+	font-size: 18px;
+	color: rgb(167, 167, 167);
+	margin-left: 0.8rem;
+}
+.ui-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
 }
 
-/* Placeholder */
-[type="placeholder"] {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: -0.015em;
-    color: #00cbb0;
+/* -- POP TEXT AREA -- */
+textarea {
+	color: black;
+	font-weight: 600;
+	font-size: 1.3rem;
+	width: 93%;
+	margin-top: 0.3rem;
+	margin-left: 0.8rem;
+	height: 6.5rem;
+	outline: none;
+	border: none;
+	resize: none;
+}
+::placeholder {
+	font-weight: 600;
+	font-size: 18px;
+	color: #00cbb0;
+}
+#pop-input {
+	display: inline-block;
+	overflow-wrap: break-word;
+	overflow: hidden;
+	white-space: pre-wrap;
 }
 
-main {
-	width: 100vh;
+.pop-content {
+	color: black;
+	font-weight: 600;
+	font-size: 1.3rem;
+	width: 93%;
+	margin-top: 0.3rem;
+	margin-left: 0.8rem;
+	height: 6.5rem;
+	outline: none;
+	border: none;
+	resize: none;
+	font-weight: 600;
+	font-size: 18px;
+	color: #00cbb0;
+}
+
+/* -- UI POP BUTTONS -- */
+.ui-button {
+	width: 1.7rem;
+	height: 1.7rem;
+	box-shadow: 2px 2px 2px #e8e2ef;
+	border-radius: 17px;
+	outline: none;
+	border: none;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+.ui-button:hover {
+	position: relative;
+	top: 2px;
+	left: 2px;
+}
+
+/* -- BOTTOM OF THE CARD'S BUTTONS -- */
+.ui-buttons {
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* -- DELETE BUTTON -- */
+.delete-pop {
+	background: #bdb2ff;
+}
+.delete-pop:hover {
+	background: #c8beff;
+	clip-path: polygon(
+		20% 0%,
+		0% 20%,
+		30% 50%,
+		0% 80%,
+		20% 100%,
+		50% 70%,
+		80% 100%,
+		100% 80%,
+		70% 50%,
+		100% 20%,
+		80% 0%,
+		50% 30%
+	);
+}
+.delete-pop:active {
+	background: #a899f8;
+}
+
+/* -- LIKE BUTTON -- */
+.like-pop {
+	background: #f15bb5;
+}
+.like-pop:hover {
+	background: #ff9dd8;
+	clip-path: polygon(
+		50% 0%,
+		61% 35%,
+		98% 35%,
+		68% 57%,
+		79% 91%,
+		50% 70%,
+		21% 91%,
+		32% 57%,
+		2% 35%,
+		39% 35%
+	);
+}
+.like-pop:active {
+	background: #f15bb5;
+}
+
+/* -- SEND BUTTON -- */
+.send-pop {
+	background: #00bbf9;
+}
+.send-pop:hover {
+	background: #8ae2ff;
+	clip-path: polygon(0 0, 100% 50%, 0 100%, 26% 53%, 67% 49%, 26% 47%);
+}
+.send-pop:active {
+	background: #00bbf9;
+}
+/* --| END OF POPS |-- */
+
+/* --| SECTIONS |-- */
+.container {
+	max-width: 70%;
 	margin: auto;
 }
+main,
+footer {
+	padding: 3rem 0rem;
+}
+#introduction,
+#news-feed,
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f8f9fa;
+	width: 100%;
+	padding: 3rem 0rem;
+}
+footer {
+	background-color: #00bbf9;
+}
+
+/* -- INTRODUCTION SECTION -- */
+.introduction-welcome {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+.introduction-welcome img {
+	margin-right: 2rem;
+}
+.introduction-welcome p {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.introduction-welcome-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+	align-self: center;
+	width: 50%;
+}
+
+/* -- NEWS FEED SECTION -- */
+#news-feed {
+	background-color: #bdb2ff;
+}
+/* --| END OF SECTIONS |-- */
+
+/* --| TITLES |-- */
+h1 {
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
+h2 {
+	text-transform: uppercase;
+}
+
+/* --| FOOTER |-- */
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+footer ul li {
+	list-style: none;
+}
+footer ul li a:hover {
+	font-weight: 800;
+}
+.social-media {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0rem 4rem;
+	margin-bottom: 2rem;
+}
+.p-footer {
+	padding-left: 4rem;
+	width: 50%;
+}
+/* --| END OF FOOTER |-- */
